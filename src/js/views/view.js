@@ -28,8 +28,6 @@ export default class View {
     this._data = data;
     const newMarkup = this._generateMarkup();
 
-    console.log(this._parentElement);
-
     const newDOM = document.createRange().createContextualFragment(newMarkup);
     const newElements = Array.from(newDOM.querySelectorAll('*'));
     const curElements = Array.from(this._parentElement.querySelectorAll('*'));
